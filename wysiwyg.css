@@ -1,0 +1,53 @@
+body {
+  background-color: lightgreen;
+}
+
+/* Styles the Input area */
+
+.input-wrapper {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#input-field {
+  width: 40%;
+  height: 100px;
+  margin: .5em;
+}
+
+/* Cat Card Container Div*/
+
+#cat-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Cat Card Styling */ 
+
+cat {
+  flex-basis: 30%;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #05243A;
+  border: 1px solid black;
+  border-radius: 15px;
+  -webkit-box-shadow: 10px 10px 10px -1px rgba(56, 97, 4, 0.93);
+  -moz-box-shadow: 10px 10px 10px -1px rgba(56, 97, 4, 0.93);
+  box-shadow: 10px 10px 10px -1px rgba(56, 97, 4, 0.93);
+  margin: 1em;
+
+}
+
+header, section, footer {
+  font-weight: bold;
+  margin-left: 1em;
+}
+
+.image-wrapper {
+  text-align: center;
+}
+
+.dotted {
+  border: 4px dotted red;
+}
