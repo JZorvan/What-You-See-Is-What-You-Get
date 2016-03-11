@@ -3,7 +3,7 @@
 ## JS Exercise for NSS
 
 ### Decription
-JavaScript exercise to practice HEY PUT SHIT HERE.
+JavaScript exercise to practice event listeners.
 
 ### Instructions
 
