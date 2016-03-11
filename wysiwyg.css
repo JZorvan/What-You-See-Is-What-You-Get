@@ -15,7 +15,7 @@ body {
   margin: .5em;
 }
 
-/* Cat Card Container Div*/
+/* Cat Card Container Div */
 
 #cat-box {
   display: flex;
@@ -48,6 +48,18 @@ header, section, footer {
   text-align: center;
 }
 
+/*  Add a dotted border for active card */
+
 .dotted {
   border: 4px dotted red;
+}
+
+/* Add a light yellow background for even numbered cards */
+
+.even-yellow {
+  background-color: lightyellow;
+}
+/* Add a light blue background for odd numbered cards */
+.odd-blue {
+  background-color: lightblue;
 }
