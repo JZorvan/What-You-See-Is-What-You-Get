@@ -1,7 +1,9 @@
+// Assigns variables for DOM elements used in functions below
 var catBox = document.getElementById("cat-box");
 var catCard = document.getElementsByTagName("cat");
 var bioInput = document.getElementById("input-field");
 
+// Created an array of objects to populate the cards with
 var catArray = [
     
   grumpyObj = {
@@ -70,12 +72,13 @@ var catArray = [
     }
   }];
       
+// This function puts the array of cat objects on the DOM and calls it.      
   function printCats(catArray) {       
     for (var i = 0; i < catArray.length; i++) {
       var ballOfString = "";
       ballOfString += `<cat>`;
       ballOfString += `<header><p>Name: ${catArray[i].name}</p><p>Title: ${catArray[i].title}</p></header>`;
-      ballOfString += `<section><div class="image-wrapper"><img src=${catArray[i].image}></div><p>Bio: ${catArray[i].bio}</p></section>`;
+      ballOfString += `<section><div class="image-wrapper"><img src=${catArray[i].image}></div><p class="bio">Bio: ${catArray[i].bio}</p></section>`;
       ballOfString += `<footer><p>Lifespan: ${catArray[i].lifespan.birth} - ${catArray[i].lifespan.death}</p></footer>`;
       ballOfString += `</cat>`;
       catBox.innerHTML += ballOfString;
@@ -83,7 +86,22 @@ var catArray = [
   };
 
   printCats(catArray)
-    
+
+// This function alters the background colors of the even and odd cards and call it
+// NOTE: The "even" and "odd" cards are by the users perspective, not index value
+  function cardColor (catCard) {
+    for (var c = 0; c < catCard.length; c++) {
+      if ([c] % 2 == 0) {
+      catCard[c].classList.add("odd-blue");
+    } else {
+      catCard[c].classList.add("even-yellow");
+    };
+  }};
+
+  cardColor(catCard)
+
+// This function gives a card a different border when clicked, to draw attention that it is selected and then returns focus to the input area.
+// NOTE: This function also removes any existing red dotted borders and clears the input value on click.
   function dottedCard(catCard) {
     for (var j = 0; j < catCard.length; j++) {
       catCard[j].addEventListener("click", function(event) {
@@ -91,9 +109,30 @@ var catArray = [
           catCard[k].classList.remove("dotted");
         }
         this.classList.add("dotted");
+        bioInput.value = "";
         bioInput.focus();
       });
     };
   };
 
   dottedCard(catCard)
+
+// This function takes each keypress from the input area and replaces the bio section on the selected card, and clears the input field upon enter keypress.  If you then edit another card, the new bio information remains on previously editted cards.
+  bioInput.addEventListener("keyup", function changeBio(e) {
+    var targetCard = document.getElementsByClassName("dotted")[0];
+      if (targetCard === undefined) {
+        alert("Please select a cat to edit.");
+      }
+      if (targetCard !== undefined) {
+        var bioSection = targetCard.getElementsByTagName("p")[2];
+        bioSection.innerHTML = "Bio: " + bioInput.value;
+      };
+      if (event.which == 13) {
+        bioSection.value = bioInput.value;
+        bioInput.value = "";
+      };   
+  });
+
+
+
+  
