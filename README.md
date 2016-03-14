@@ -34,5 +34,16 @@ JavaScript exercise to practice event listeners.
 10. When there is a highlighted cat element, and you begin typing in the input box, the cat's biography should be immediately bound to what you are typing, letter by letter.
 11. When you press the enter/return key when typing in the input field, then the content of the input field should immediately be blank.
 
+### Screenshots  
+
+##### Initial load view of website:
+![Initial load view of website](https://github.com/JZorvan/What-You-See-Is-What-You-Get/blob/master/screenshots/First%20load.png?raw=true "Initial load view of website")
+
+##### Editing a selected bio section:
+![Editing a selected bio section](https://github.com/JZorvan/What-You-See-Is-What-You-Get/blob/master/screenshots/Select%20One.png?raw=true "Editing a selected bio section.")
+
+##### Editing a second selection:
+![Editing a second selection](https://github.com/JZorvan/What-You-See-Is-What-You-Get/blob/master/screenshots/Select%20Two.png?raw=true "Editing a second selection.")
+
 ### Contributors
 - [Janelle Zorvan](https://github.com/JZorvan)
