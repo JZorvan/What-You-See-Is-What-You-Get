@@ -24,11 +24,11 @@ JavaScript exercise to practice event listeners.
 5. For every even numbered element, have a light yellow background.
 6. For every odd numbered element, have a light blue background.
 7. Each element's DOM structure should be as shown here:  
-`<cat>  
-&nbsp&nbsp<header>Name and title go here</header>  
-&nbsp&nbsp<section>Bio and image go here</section>  
-&nbsp&nbsp<footer>Lifespan info goes here</footer>  
-</cat>`  
+`<cat>    
+&nbsp&nbsp<header>Name and title go here</header>    
+&nbsp&nbsp<section>Bio and image go here</section>    
+&nbsp&nbsp<footer>Lifespan info goes here</footer>    
+</cat>`    
 8. When you click on one of the cat elements, a dotted border should appear around it.
 9. When you click on one of the cat elements, the text input should immediately gain focus so that you can start typing.
 10. When there is a highlighted cat element, and you begin typing in the input box, the cat's biography should be immediately bound to what you are typing, letter by letter.
